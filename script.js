@@ -119,10 +119,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Menu Button Toggle
-const menuButton = document.getElementById('menuButton');
-const navbarUl = document.querySelector('nav ul');
 
-menuButton.addEventListener('click', () => {
-    navbarUl.classList.toggle('show');
-});
+
+
+let timer; 
+
+function showNavbar() {
+    document.getElementById('navbar').style.opacity = '1';
+}
+
+function hideNavbar() {
+    document.getElementById('navbar').style.opacity = '0';
+}
+
+function handleScroll() {
+    
+    clearTimeout(timer);
+    
+    showNavbar();
+
+    timer = setTimeout(hideNavbar, 8000);
+}
+
+window.addEventListener('scroll', handleScroll);
+
+handleScroll();

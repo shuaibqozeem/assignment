@@ -1,85 +1,85 @@
 /* Global Styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     scroll-behavior: smooth;
+    background-color: #f4f4f4;
 }
 
 section {
     padding: 60px 20px;
-    background-color: #f4f4f4;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 h2 {
     margin-top: 0;
-    font-size: 28px;
+    font-size: 30px;
     text-align: center;
+    color: #333;
 }
 
 /* Navigation Bar */
 nav {
     position: fixed;
     width: 100%;
-    background: #333;
-    z-index: 1000;
-    top: 0;
-}
-
-nav .menu-button {
-    display: none; /* Hide on larger screens */
-    font-size: 24px;
-    background: #333;
     color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    padding-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    height: 60px;
 }
 
 nav ul {
     list-style: none;
     margin: 0;
-    padding: 10px;
-    text-align: center;
+    padding: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
-    padding: 10px;
-    transition: color 0.3s ease;
+    color: black;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-    color: #ff4757;
+    background-color: #ff4757;
+    color: white;
 }
 
 /* Home Section */
 .home-content {
     text-align: center;
     background-color: #333;
+    background-repeat: no-repeat;
+    background-size: contain;
+
     color: white;
-    padding: 100px 20px;
+    padding: 120px 20px;
+    /* background-image: url(image/prem\ clubs.jpg); */
+    border-bottom: 1px solid #444;
 }
 
 .home-content h1 {
-    font-size: 36px;
+    font-size: 40px;
     margin-bottom: 20px;
 }
 
 .home-content p {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 /* Section Content */
@@ -87,10 +87,11 @@ nav ul li a.active {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    color: #333;
 }
 
 .section-content p {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 20px;
 }
 
@@ -100,38 +101,36 @@ nav ul li a.active {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 20px;
 }
 
 .key-players .player {
     background-color: white;
     padding: 20px;
-    border: 1px solid #ddd;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    max-width: 180px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 200px;
     text-align: center;
+    padding-top: 40px;
 }
 
 .key-players .player img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .key-players .player h3 {
-    margin-top: 10px;
-    font-size: 18px;
+    margin-top: 15px;
+    font-size: 20px;
     color: #333;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 100%; /* Ensure it fits the container */
-    text-align: center; /* Center the text */
 }
 
 /* Typing Effect */
 .typing-text.typing {
-    border-right: 0; /* Remove cursor */
-    animation: none; /* Stop blinking animation */
+    border-right: 0;
+    animation: none;
 }
 
 /* Collapsible Button */
@@ -139,21 +138,18 @@ nav ul li a.active {
     background-color: transparent;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 12px 20px;
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 6px;
     margin: 20px 0;
-    display: block;
-    width: 200px;
     font-size: 16px;
-    display: flex;
-    justify-content: center;
+    transition: background-color 0.3s;
 }
 
 .collapsible:hover {
-    background-color: #555;
+    color: black;
 }
 
 /* Collapsible Content */
@@ -167,8 +163,8 @@ nav ul li a.active {
     padding: 20px;
     background-color: #fff;
     color: #333;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Scroll to Top Button */
@@ -178,7 +174,7 @@ nav ul li a.active {
     bottom: 20px;
     right: 20px;
     z-index: 99;
-    font-size: 18px;
+    font-size: 20px;
     border: none;
     outline: none;
     background-color: #333;
@@ -186,7 +182,7 @@ nav ul li a.active {
     cursor: pointer;
     padding: 15px;
     border-radius: 50%;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 #scrollToTopBtn:hover {
@@ -213,16 +209,15 @@ footer .social-media {
 }
 
 footer .social-media a {
-    margin: 0 10px;
+    margin: 0 12px;
     color: white;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 footer .social-media a:hover {
     color: #ff4757;
 }
 
-/* Section Backgrounds */
 #manchester-city {
     background-color: #1e90ff; /* Manchester City */
     color: black;
@@ -240,28 +235,25 @@ footer .social-media a:hover {
     background-color: #da291c; /* Manchester United */
 }
 
-/* Responsive Styles */
+img {
+    width: 300px;
+    border-radius: 8px;
+}
+
 @media (max-width: 768px) {
-    .key-players {
-        flex-direction: column;
-        align-items: center;
-    }
-
     nav ul {
-        display: none; /* Hide nav links initially */
-        flex-direction: column;
+        /* flex-direction: column; */
         align-items: center;
-        position: absolute;
-        top: 60px; /* Adjust based on your navbar height */
-        width: 100%;
         background-color: #333;
+        padding: 10px 0;
+        position: static;
     }
 
-    nav ul.show {
-        display: flex; /* Show nav links when toggled */
+    nav ul li {
+        margin: 8px 0;
     }
 
-    .menu-button {
-        display: block;
+    img {
+        width: 200px;
     }
 }
